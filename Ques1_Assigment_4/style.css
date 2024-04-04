@@ -1,0 +1,14 @@
+.style-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;   
+}
+
+table,tr,td{
+    padding: 10px;
+}
+
+input,button{
+    border: 2px solid black;
+}
+

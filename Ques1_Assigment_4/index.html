@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;"><u>Calculator</u></h1>
+    <div class="style-div">
+        <table>
+            <tr>
+                <td colspan="2">Enter Number 1</td>
+                <td colspan="2"> <input type="text" id="text1"></td>
+                <td>
+                    <div id="ErrorMessage1"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Enter Number 2</td>
+                <td colspan="2"> <input type="text" id="text2"></td>
+                <td>
+                    <div id="ErrorMessage2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Result</td>
+                <td colspan="2">
+                    <div id="result"></div>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="Add()">Addition</button>
+                </td>
+                <td>
+                    <button type="button" onclick="Subtract()">
+                        Subtraction
+                    </button>
+                </td>
+                <td>
+                    <button type="button" onclick="Multiply()">
+                        Multiplication
+                    </button>
+                </td>
+                <td>
+                    <button type="button" onclick="Divide()">
+                        Division
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="validation.js"></script>
+    <script>
+
+        function Add() {
+            var x;
+            var y;
+            var z;
+            var isXNum;
+            var isYNum;
+            var refToResult = document.getElementById("result");
+
+            if (EmptyValidate("text1", "ErrorMessage1")) {
+
+                if (NumberValidate("text1", "ErrorMessage1")) {
+                    x = parseInt(document.getElementById("text1").value);
+                    isXNum = true;
+                }
+
+            }
+
+            if (EmptyValidate("text2", "ErrorMessage2")) {
+
+                if (NumberValidate("text2", "ErrorMessage2")) {
+                    y = parseInt(document.getElementById("text2").value);
+                    isYNum = true;
+                }
+
+
+                if (isXNum && isYNum) {
+                    refToResult.innerText = x + y;
+                }
+                else {
+                    refToResult.innerText = "";
+                }
+
+            }
+        }
+
+        function Subtract() {
+            var x;
+            var y;
+            var z;
+            var isXNum;
+            var isYNum;
+            var refToResult = document.getElementById("result");
+
+            if (EmptyValidate("text1", "ErrorMessage1")) {
+
+                if (NumberValidate("text1", "ErrorMessage1")) {
+                    x = parseInt(document.getElementById("text1").value);
+                    isXNum = true;
+                }
+
+            }
+
+            if (EmptyValidate("text2", "ErrorMessage2")) {
+
+                if (NumberValidate("text2", "ErrorMessage2")) {
+                    y = parseInt(document.getElementById("text2").value);
+                    isYNum = true;
+                }
+
+
+                if (isXNum && isYNum) {
+                    refToResult.innerText = x - y;
+                }
+                else {
+                    refToResult.innerText = "";
+                }
+
+            }
+        }
+
+
+        function Multiply() {
+            var x;
+            var y;
+            var z;
+            var isXNum;
+            var isYNum;
+            var refToResult = document.getElementById("result");
+
+            if (EmptyValidate("text1", "ErrorMessage1")) {
+
+                if (NumberValidate("text1", "ErrorMessage1")) {
+                    x = parseInt(document.getElementById("text1").value);
+                    isXNum = true;
+                }
+
+            }
+
+            if (EmptyValidate("text2", "ErrorMessage2")) {
+
+                if (NumberValidate("text2", "ErrorMessage2")) {
+                    y = parseInt(document.getElementById("text2").value);
+                    isYNum = true;
+                }
+
+
+                if (isXNum && isYNum) {
+                    refToResult.innerText = x * y;
+                }
+                else {
+                    refToResult.innerText = "";
+                }
+
+            }
+        }
+
+        function Divide() {
+            var x;
+            var y;
+            var z;
+            var isXNum;
+            var isYNum;
+            var refToResult = document.getElementById("result");
+
+            if (EmptyValidate("text1", "ErrorMessage1")) {
+
+                if (NumberValidate("text1", "ErrorMessage1")) {
+                    x = parseInt(document.getElementById("text1").value);
+                    isXNum = true;
+                }
+
+            }
+
+            if (EmptyValidate("text2", "ErrorMessage2")) {
+
+                if (NumberValidate("text2", "ErrorMessage2")) {
+                    y = parseInt(document.getElementById("text2").value);
+                    isYNum = true;
+                }
+
+
+                if (isXNum && isYNum) {
+                    refToResult.innerText = x / y;
+                }
+                else {
+                    refToResult.innerText = "";
+                }
+
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
