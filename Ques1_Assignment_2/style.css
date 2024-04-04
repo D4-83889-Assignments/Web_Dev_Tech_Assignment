@@ -1,0 +1,26 @@
+.div1 {
+    background-color: rgb(241, 172, 12);
+    width: 8%;
+    height: 20px
+}
+
+.div2 {
+    background-color: green;
+    width: 30%;
+    height: 20px;
+}
+
+.div3 {
+
+    background-color: rgba(241, 172, 9, 12);
+    width: 30%;
+    height: 20px;
+
+}
+
+.div4 {
+
+    background-color: green;
+    width: 2%;
+    height: 20px
+}

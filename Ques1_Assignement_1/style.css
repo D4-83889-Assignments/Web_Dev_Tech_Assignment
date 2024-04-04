@@ -1,0 +1,45 @@
+table,th,td{
+    border: 2px solid;
+    border-collapse: collapse;
+}
+
+html{
+    border: 6px groove black;
+    margin: 15px;
+}
+
+#div1{
+    padding-left: 68px;
+    display : block;
+    justify-content: space-between
+}
+
+#div2{
+    display: flex;
+    justify-content: space-around;
+}
+
+li.Tick {
+    list-style: none;
+  }
+
+li{
+    list-style: none;
+}
+  
+li.Tick:before {
+    content: '✓';
+  }
+
+.color{
+    color: rgb(23, 60, 129);
+}
+
+#margin_dec{
+    margin-left: 15px;
+}
+
+#container_big{
+    display: flex;
+    justify-content: space-between;
+}
