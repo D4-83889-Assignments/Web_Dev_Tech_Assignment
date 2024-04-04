@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1 style="text-align: center;"><u>Registration Form</u></h1>
+    <div style="display: flex; justify-content: space-around ;margin-top:100px" >
+        <div>
+    <iframe width="550" height="350" src="https://www.youtube.com/embed/02q9aAVv1NI" title="Sunbeam Institute of IT - Pune &amp; Karad" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+    </div>
+        <div>
+            <form>
+                Name <input class="text-box padding-btw" type="text" placeholder="Enter Name" style="margin-left: 105px;" ><br>
+                BirthDate <input class="text-box padding-btw" type="date" class="padding-btw";><br>
+                Password <input class="text-box padding-btw" type="password" placeholder="*********" style="margin-left:82px;" ;><br>
+                Address <select class="text-box padding-btw" name="state" id="" style="margin-left: 91px;">
+                    <option value="">Maharashtra</option>
+                    <option value="">MP</option>
+                    <option value="">UP</option>
+                </select>
+                <select name="state" id="">
+                    <option value="">Pune</option>
+                    <option value="">Indore</option>
+                    <option value="">Lucknow</option>
+                </select>
+                <select name="state" id="">
+                    <option value="">Mumbai</option>
+                    <option value="">Bhopal</option>
+                    <option value="">Kanpur</option>
+                </select>
+                <br>
+                Gender <input type="radio" name="Gender" value="M" style="margin-left: 95px ; " class="padding-btw">Male
+                <input type="radio" name="Gender" value="F" style="margin-left: 30px ;">Female
+                <br>
+                <div style="display: flex;">
+                    <label for="image_uploads">Upload photo</label>
+                    <input type="file" id="image_uploads" name="image_uploads"  style="margin-left: 57px;"/>
+                </div>
+
+                <br>
+                <label for="course">Select your course</label>
+                <select name="course" id="course" style="margin-left:24px ;">Select Course
+                    <option value="">
+                        DAC
+                    </option>
+                    <option value="">DMC</option>
+                    <option value="">DTISS</option>
+                    <option value="">DBDA</option>
+
+                </select>
+                <br>
+                <button style="margin-left: 30px;margin-top: 20px;">Register</button>
+                <button style="margin-left: 100px;">Clear</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
