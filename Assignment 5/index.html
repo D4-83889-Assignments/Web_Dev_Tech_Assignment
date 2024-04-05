@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgba(225, 216, 216, 0.862);">
+
+    <img src="./desktop-wallpaper-ferrari-f1-75-formula-1-2022-new-car-side-view-white-background-formula-1-ferrari-2022.jpg"
+        height="60px" id="car-img" style="position: absolute;">
+    <div style="width:80%;background-color: black; height: 45px; position: absolute;top: 68px;"></div>
+    <div style="position: absolute;top:120px;">
+        <table>
+            <tr>
+                <td>X-axis: </td>
+                <td colspan="8">
+                    <div style="border: 1px solid black;height: 20px;width: 600px;" id="X-axisDiv"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Y-axis: </td>
+                <td colspan="8">
+                    <div style="border: 1px solid black;height: 20px;width: 600px;" id="Y-axisDiv"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><button style="height: 20px; width:70px
+            ;" onclick="StartMoving()">Start</button></td>
+                <td><button style="height: 20px; width:70px
+                ;" onclick="StopMoving()">Stop</button></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div style="position: absolute; top: 400px; left:1400px; width: 300px; height:300px; opacity: 0; background-color: yellowgreen; display: flex; justify-content: center;align-items: center;"
+        id="catch-div">
+        <h3>Car Crashed, Program Done!!!</h3>
+    </div>
+    <script>
+        var leftPos = 0.0;
+        var topPos = 0;
+        var queueNo;
+        var QueueArr = new Array();
+        var rotateImg = 0;
+        var rotateQueueNo;
+        function move() {
+            var refToImg = document.getElementById("car-img");
+            var refToXAxisDiv = document.getElementById("X-axisDiv");
+
+            if (refToImg != null && leftPos < 1240.0) {
+                leftPos = leftPos + 20;
+                refToImg.style.left = leftPos + "px";
+                refToXAxisDiv.innerText = leftPos;
+
+                if (leftPos > 1150) {
+                    setInterval(rotate, 700);
+                }
+            }
+            else {
+                for (let i = 0; i < QueueArr.length; i++) {
+                    QueueArr.pop();
+
+
+                }
+
+                setInterval(movedown, 1000);
+
+            }
+
+
+        }
+        function StartMoving() {
+
+
+            queueNo = setInterval(move, 100);
+            QueueArr.push(queueNo);
+
+
+        }
+        function StopMoving() {
+            if (QueueArr.length > 0) {
+                queueNo = QueueArr.pop();
+                clearInterval(queueNo);
+            }
+            else {
+                console.log("No queue left");
+            }
+        }
+        function movedown() {
+            var refToYAxisDiv = document.getElementById("Y-axisDiv");
+            var refToImg = document.getElementById("car-img");
+            var refToCatchDiv = document.getElementById("catch-div");
+            if (refToYAxisDiv != null && topPos < 500) {
+                topPos = topPos + 5;
+                leftPos = leftPos + 2;
+                refToImg.style.top = topPos + "px";
+                refToImg.style.left = leftPos + "px";
+                refToYAxisDiv.innerText = topPos;
+            }
+            else {
+                refToImg.style.opacity = 0.3;
+                refToCatchDiv.style.opacity = 0.8;
+            }
+        }
+        function rotate() {
+            var refToImg = document.getElementById("car-img");
+            if (rotateImg < 350) {
+                rotateImg = rotateImg + 10;
+                refToImg.style.rotate = rotateImg + "deg";
+
+            }
+            else {
+                clearInterval(rotateQueueNo);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
